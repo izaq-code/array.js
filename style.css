@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,400&display=swap");
+
+:root {
+  --bg-color: #ffffff;
+  --button-color: #326589;
+  --text-title-color: #002f52;
+  --text-description-color: #fc6621;
+  --text-price-color: #002f52;
+  --text-author-color: #858585;
+  --text-tag-color: #000000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: smooth;
+  scroll-behavior: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 0; 
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+  background-color: var(--bg-color);
+  margin: 15px 15px;
+}
+
+.banner {
+  background-image: url("/imagens/Banner-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40vh;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav li {
+  list-style-type: none;
+}
+
+.btn {
+  background-color: var(--button-color);
+  border: none;
+  cursor: pointer;
+  height: 44px;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  transition: 0.2s all linear;
+}
+
+.btn:hover {
+  color: #d1d1d1;
+  border-radius: 10px;
+  border-bottom: 10px 10px solid var(--bg-color);
+  transition: 0.2s all linear;
+  box-shadow: 5px 8px 10px rgb(0, 0, 0, 0.2);
+}
+
+.livros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(352px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#estilo {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 30px;
+}
+#imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+
+.wrapp {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .wrapp {
+    flex-direction: column;
+  }
+
+  .btn {
+    height: 50px;
+    width: 80px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1008px) {
+  .wrapp {
+    flex-direction: column;
+  }
+
+  .btn {
+    height: 50px;
+    width: 80px;
+    font-size: 10px;
+  }
+}
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.livro {
+  width: 352px;
+  display: flex;
+  border-radius: 20px 0px 20px 0px;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 644px;
+  margin-bottom: 1rem;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+  margin-top: 100px;
+}
+
+.indisponivel {
+  position: relative;
+  opacity: 0.3;
+}
+
+.livro__titulo {
+  color: var(--text-title-color);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  width: 300px;
+  margin-left: 25px;
+  line-height: 24px;
+}
+
+.livro__descricao {
+  text-align: center;
+  font-size: 14px;
+  width: 300px;
+  margin: 15px 25px;
+  color: var(--text-author-color);
+}
+
+.livro__preco {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  margin-top: 520px;
+  margin-left: 120px;
+  color: var(--text-price-color);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-top: 38rem;
+  margin-left: 0.5rem;
+  position: absolute;
+}
+
+.tag {
+  border: 2px solid black;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bolder;
+  color: var(--text-tag-color);
+  padding: 5px 4px;
+  background: rgba(197, 197, 197, 0.4);
+  border-radius: 10px 0px 10px 0px;
+  margin-right: 1rem;
+}
+
+.livros__disponiveis {
+  width: 600px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: var(--text-description-color);
+  margin: 1rem auto;
+  text-align: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -10%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.livros__disponiveis p {
+  color: #fff;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 1.5em;
+}
+
+.rodape {
+  width: 100%;
+  height: 104px;
+  background: linear-gradient(96.48deg, #002f52 36.3%, #326589 99.56%);
+  margin-top: 1rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rodape p {
+  color: #fff;
+  font-weight: 500;
+  line-height: 24px;
+}
